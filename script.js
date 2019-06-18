@@ -1,7 +1,7 @@
 const tasks = ["buy milk", "eat dinner", "nail javascript", "give feedback"];
 
 const createElement = value => {
-  let li = document.createElement("li");
+  const li = document.createElement("li");
   li.textContent = value;
   toDoList.appendChild(li);
 };
@@ -18,7 +18,8 @@ toDoList.addEventListener("click", event => {
 // create element and listen to keyup event for input
 const input = document.querySelector("input");
 input.addEventListener("keyup", event => {
-  if (event.keyCode === 13) {
+  const enterKey = 13;
+  if (event.keyCode === enterKey) {
     event.preventDefault();
     createElement(input.value);
   }
